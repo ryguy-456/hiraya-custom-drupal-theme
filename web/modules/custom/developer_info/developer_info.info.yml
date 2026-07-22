@@ -1,0 +1,5 @@
+name: Developer Info
+type: module
+description: Displays developer and site information.
+package: Custom
+core_version_requirement: ^10 || ^11

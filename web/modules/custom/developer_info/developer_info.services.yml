@@ -1,0 +1,6 @@
+services:
+  developer_info.service:
+    class: Drupal\developer_info\Service\DeveloperInfoService
+    arguments:
+      - '@config.factory'
+      - '@current_user'

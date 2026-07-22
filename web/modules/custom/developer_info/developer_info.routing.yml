@@ -1,0 +1,15 @@
+developer_info.page:
+  path: '/developer-info'
+  defaults:
+    _controller: '\Drupal\developer_info\Controller\DeveloperInfoController::content'
+    _title: 'Developer Information'
+  requirements:
+    _permission: 'view developer info'
+
+developer_info.settings:
+  path: '/admin/config/system/developer-info'
+  defaults:
+    _form: '\Drupal\developer_info\Form\DeveloperInfoSettingsForm'
+    _title: 'Developer Info Settings'
+  requirements:
+    _permission: 'administer developer info'
