@@ -22,7 +22,7 @@ class DeveloperInfoService {
 
     return [
       'developer' => 'Ryan Buen',
-      'project' => 'Accenture Drupal Demo',
+      'project' => 'Drupal Engineering Demo',
       'environment' => 'Development',
       'user' => $this->currentUser->getDisplayName(),
       'php' => PHP_VERSION,
