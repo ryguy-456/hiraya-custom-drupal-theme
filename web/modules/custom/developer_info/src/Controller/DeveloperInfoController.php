@@ -40,8 +40,7 @@ class DeveloperInfoController extends ControllerBase {
             <tbody>
               <tr>
                 <th>Author</th>
-                <td>'.$info['author
-'].'</td>
+                <td>'.$info['author'].'</td>
               </tr>
 
               <tr>
