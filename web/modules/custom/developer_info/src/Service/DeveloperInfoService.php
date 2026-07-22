@@ -21,8 +21,8 @@ class DeveloperInfoService {
   public function getDeveloperInfo(): array {
 
     return [
-      'developer' => 'Ryan Buenconsejo',
-      'project' => 'Drupal Engineering Demo',
+      'author' => 'Ryan Buenconsejo',
+      'project' => '🚀 Drupal Engineering Demo',
       'environment' => 'Development',
       'user' => $this->currentUser->getDisplayName(),
       'php' => PHP_VERSION,
