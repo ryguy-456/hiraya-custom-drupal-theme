@@ -24,19 +24,69 @@ class DeveloperInfoController extends ControllerBase {
 
     $info = $this->developerInfoService->getDeveloperInfo();
 
-    return [
-      '#theme' => 'item_list',
-      '#title' => 'Developer Information',
-      '#items' => [
-        'Developer: ' . $info['developer'],
-        'Project: ' . $info['project'],
-        'Environment: ' . $info['environment'],
-        'PHP: ' . $info['php'],
-        'Drupal: ' . $info['drupal'],
-        'User: ' . $info['user'],
-        'Time: ' . $info['time'],
-      ],
-    ];
+    $markup = '
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Developer Information</h2>
+        </div>
+
+        <div class="card-body">
+
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Developer</th>
+                <td>'.$info['developer'].'</td>
+              </tr>
+
+              <tr>
+                <th>Project</th>
+                <td>'.$info['project'].'</td>
+              </tr>
+
+              <tr>
+                <th>Environment</th>
+                <td><span class="badge bg-success">'.$info['environment'].'</span></td>
+              </tr>
+
+              <tr>
+                <th>Drupal</th>
+                <td>'.$info['drupal'].'</td>
+              </tr>
+
+              <tr>
+                <th>PHP</th>
+                <td>'.$info['php'].'</td>
+              </tr>
+
+              <tr>
+                <th>Current User</th>
+                <td>'.$info['user'].'</td>
+              </tr>
+
+              <tr>
+                <th>Generated</th>
+                <td>'.$info['time'].'</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>';
+
+return [
+  '#markup' => $markup,
+];
+
 
   }
 
