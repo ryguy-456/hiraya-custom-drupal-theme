@@ -21,7 +21,7 @@ class DeveloperInfoService {
   public function getDeveloperInfo(): array {
 
     return [
-      'developer' => 'Ryan Buen',
+      'developer' => 'Ryan Buenconsejo',
       'project' => 'Drupal Engineering Demo',
       'environment' => 'Development',
       'user' => $this->currentUser->getDisplayName(),
