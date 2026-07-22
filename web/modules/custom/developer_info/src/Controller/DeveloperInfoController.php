@@ -39,7 +39,7 @@ class DeveloperInfoController extends ControllerBase {
           <table class="table table-striped">
             <tbody>
               <tr>
-                <th>Developer</th>
+                <th>Author</th>
                 <td>'.$info['developer'].'</td>
               </tr>
 

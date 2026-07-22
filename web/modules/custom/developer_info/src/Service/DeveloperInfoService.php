@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Drupal\developer_info\Service;
