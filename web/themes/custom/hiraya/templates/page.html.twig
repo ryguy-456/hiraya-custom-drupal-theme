@@ -192,18 +192,12 @@
 
 {# Main #}
 {% block main %}
-  {% set has_sidebar_first  = _self.hasContent(page.sidebar_first) %}
+  {% set has_sidebar_first = _self.hasContent(page.sidebar_first) %}
   {% set has_sidebar_second = _self.hasContent(page.sidebar_second) %}
-  {% set container = theme.settings.full_width_containers.cnt_content
-  or node.field_dth_main_content_width.getString() == 'dxpr-theme-util-full-width-content'
-  or node and attribute(theme.settings.full_width_content_types, node.getType)
-  and not has_sidebar_first
-  and not has_sidebar_second ? '' : 'container' %}
+  {% set container = '' %}
 
   <div role="main" class="main-container {{ container }} js-quickedit-main-content clearfix">
-    {% if container != '' %}
-    <div class="row">
-    {% endif %}
+
       {# Sidebar First #}
       {% if has_sidebar_first %}
         {% block sidebar_first %}
