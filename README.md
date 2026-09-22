@@ -1,22 +1,46 @@
-# Composer-enabled Drupal template
+# HIRAYA — Drupal Portfolio Theme
 
-This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
-that work with the Platform's Integrated Composer build process. It is also the
-Platform's standard Drupal 9 upstream.
+A custom Drupal 11 portfolio website built with a responsive, component-focused theme designed for showcasing web development, Drupal experience, projects, technical skills, and professional background.
 
-Unlike with earlier Pantheon upstreams, files such as Drupal Core that you are
-unlikely to adjust while building sites are not in the main branch of the 
-repository. Instead, they are referenced as dependencies that are installed by
-Composer.
+## Overview
 
-For more information and detailed installation guides, please visit the
-Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-composer
+HIRAYA is a custom Drupal theme and portfolio implementation created by Ryan Buenconsejo.
 
-## Contributing
+The project demonstrates practical experience with:
 
-Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-composer-managed` repository is a mirror that does not
-directly accept pull requests.
+- Drupal 11
+- Custom Drupal theming
+- Twig templates
+- HTML5 / CSS3
+- Responsive layouts
+- Custom Drupal blocks
+- Drupal configuration management
+- Composer
+- Drush
+- Git / GitHub
+- DDEV local development
+- Pantheon hosting and deployment
+- Accessibility-conscious development
+- Full-width responsive section layouts
 
-Instead, to propose a change, please fork [pantheon-systems/drupal-composer-managed](https://github.com/pantheon-systems/drupal-composer-managed)
-and submit a PR to that repository.
+## Technology Stack
+
+| Technology | Usage |
+|---|---|
+| Drupal 11 | Content management system |
+| PHP | Drupal runtime |
+| Twig | Theme templating |
+| HTML5 | Page structure |
+| CSS3 | Styling and responsive layout |
+| DDEV | Local development |
+| Drush | Drupal CLI management |
+| Composer | Dependency management |
+| Git / GitHub | Version control |
+| Pantheon | Hosting and deployment |
+
+## Theme
+
+The custom theme is located at:
+
+```text
+web/themes/custom/hiraya
