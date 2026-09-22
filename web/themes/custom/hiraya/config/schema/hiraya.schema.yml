@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the HIRAYA theme.
+
+hiraya.settings:
+  type: theme_settings
+  label: 'HIRAYA settings'

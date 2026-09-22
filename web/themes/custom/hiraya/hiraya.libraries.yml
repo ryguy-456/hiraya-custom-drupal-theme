@@ -1,0 +1,11 @@
+global-styling:
+  css:
+    theme:
+      css/hiraya.css: { minified: false, weight: 6 }
+
+particles:
+  js:
+    js/hiraya-particles.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
