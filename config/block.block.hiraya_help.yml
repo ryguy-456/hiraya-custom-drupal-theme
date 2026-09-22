@@ -1,0 +1,22 @@
+uuid: ecdd2b2c-11c7-453c-bdbe-fc00c80184b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - hiraya
+_core:
+  default_config_hash: mV9h_NNjjbPAWoq62QCf5yvnX3TeL4r49DFhFuRfidE
+id: hiraya_help
+theme: hiraya
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -26,7 +26,8 @@
         "drupal/dxpr_theme_helper": "^3.1",
         "drupal/dxpr_theme": "^8.1",
         "drupal/paragraphs": "^1.20",
-        "drupal/gin": "^5.0"
+        "drupal/gin": "^5.0",
+        "drupal/layout_paragraphs": "^2.1"
     },
     "require-dev": {
         "drupal/core-dev": "^11"

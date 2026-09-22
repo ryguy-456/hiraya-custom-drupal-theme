@@ -1,0 +1,28 @@
+uuid: 13f1964c-806e-4edc-b852-0f2e8fcab947
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:278983b8-ae10-4349-8549-a9d25f536a8e'
+  module:
+    - block_content
+    - system
+  theme:
+    - hiraya
+id: hiraya_hirayaskills
+theme: hiraya
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:278983b8-ae10-4349-8549-a9d25f536a8e'
+settings:
+  id: 'block_content:278983b8-ae10-4349-8549-a9d25f536a8e'
+  label: 'HIRAYA Skills'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

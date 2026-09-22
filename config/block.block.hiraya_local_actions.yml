@@ -1,0 +1,20 @@
+uuid: 03cfbe79-95cc-4e9b-aa80-8e0df3444747
+langcode: en
+status: false
+dependencies:
+  theme:
+    - hiraya
+_core:
+  default_config_hash: 72nlwRjqiXBAwD4_Wzf9YVMhGeEnqWlHF8NS6KoI7Js
+id: hiraya_local_actions
+theme: hiraya
+region: content
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

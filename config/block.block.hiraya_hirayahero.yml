@@ -1,0 +1,28 @@
+uuid: b0632e6f-f749-4d88-9d7a-52efe57dbc9d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:661d0105-80e5-4753-a225-37e26bb933dc'
+  module:
+    - block_content
+    - system
+  theme:
+    - hiraya
+id: hiraya_hirayahero
+theme: hiraya
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:661d0105-80e5-4753-a225-37e26bb933dc'
+settings:
+  id: 'block_content:661d0105-80e5-4753-a225-37e26bb933dc'
+  label: 'HIRAYA Hero'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

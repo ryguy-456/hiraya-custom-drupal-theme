@@ -1,0 +1,28 @@
+uuid: 7f5e2b5f-d074-4478-b0c2-65a492a505af
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d1474fee-4fe8-4bd3-b50b-267096772c0d'
+  module:
+    - block_content
+    - system
+  theme:
+    - hiraya
+id: hiraya_hirayaprojects
+theme: hiraya
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:d1474fee-4fe8-4bd3-b50b-267096772c0d'
+settings:
+  id: 'block_content:d1474fee-4fe8-4bd3-b50b-267096772c0d'
+  label: 'HIRAYA Projects'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

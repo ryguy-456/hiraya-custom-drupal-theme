@@ -1,0 +1,22 @@
+uuid: f8943b31-bcce-4472-adc2-426101bca744
+langcode: en
+status: false
+dependencies:
+  theme:
+    - hiraya
+_core:
+  default_config_hash: bqcUyJfypWnp1brZbJafXVGafynv0TAEfKEDh4893qM
+id: hiraya_local_tasks
+theme: hiraya
+region: content
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 39d98155-ed49-4f08-bdc7-2d52fd03b42a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1fa2de6c-db87-49b5-a78d-fc39d8a45de5'
+  module:
+    - block_content
+  theme:
+    - hiraya
+id: hiraya_hirayafooter
+theme: hiraya
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:1fa2de6c-db87-49b5-a78d-fc39d8a45de5'
+settings:
+  id: 'block_content:1fa2de6c-db87-49b5-a78d-fc39d8a45de5'
+  label: 'HIRAYA Footer'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

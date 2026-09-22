@@ -1,0 +1,28 @@
+uuid: 8c9181a5-e091-4014-b8d1-95e676c9b6da
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d73a930b-c18c-492d-9f3e-82bf5ddede9c'
+  module:
+    - block_content
+    - system
+  theme:
+    - hiraya
+id: hiraya_hirayaexperience
+theme: hiraya
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:d73a930b-c18c-492d-9f3e-82bf5ddede9c'
+settings:
+  id: 'block_content:d73a930b-c18c-492d-9f3e-82bf5ddede9c'
+  label: 'HIRAYA Experience'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

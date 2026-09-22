@@ -1,0 +1,22 @@
+uuid: 268b35d1-7faf-4102-bdf5-538b3dec98f3
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - hiraya
+_core:
+  default_config_hash: KpBqqBIyNPTNavLklXPC1-cUAeuwAbBOsrvGussFh1E
+id: hiraya_breadcrumbs
+theme: hiraya
+region: page_title
+weight: 10
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: 29117e2b-1ca3-4398-8388-0d5f31515ff2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c8ad8af7-bc9b-4d65-9dbf-8bbbb9fda828'
+  module:
+    - block_content
+    - system
+  theme:
+    - hiraya
+id: hiraya_hirayacontact
+theme: hiraya
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:c8ad8af7-bc9b-4d65-9dbf-8bbbb9fda828'
+settings:
+  id: 'block_content:c8ad8af7-bc9b-4d65-9dbf-8bbbb9fda828'
+  label: 'HIRAYA Contact'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
