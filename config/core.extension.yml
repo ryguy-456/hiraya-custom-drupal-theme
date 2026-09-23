@@ -34,9 +34,6 @@ module:
   media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
-  mercury_editor: 0
-  mercury_editor_inline_editor: 0
-  mercury_editor_templates: 0
   mysql: 0
   node: 0
   options: 0
