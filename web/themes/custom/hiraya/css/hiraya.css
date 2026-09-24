@@ -168,7 +168,7 @@ body {
 
 .dxpr-theme-header .nav > li > a,
 .dxpr-theme-header .navbar-nav > li > a {
-  color: var(--hiraya-text);
+  color: #000000;
   font-weight: 600;
   transition: color 0.2s ease;
 }
@@ -295,7 +295,7 @@ button:focus-visible {
 .dxpr-theme-header .navbar-nav .nav-link {
   border-radius: 8px;
   padding: 10px 14px;
-  color: var(--hiraya-text) !important;
+  color: #000000 !important;
   font-size: 0.95rem;
   font-weight: 600;
   transition:
@@ -1880,4 +1880,14 @@ body {
 .hiraya-project-card__type,
 .hiraya-project-card__number {
   color: #38bdf8 !important;
+}
+
+ /* HIRAYA Experience headings */
+.hiraya-experience__role {
+  color: #000000 !important;
+}
+
+/* Force header navigation text black */
+.dxpr-theme-header .dxpr-theme-main-menu .nav-link {
+  color: #000000 !important;
 }
