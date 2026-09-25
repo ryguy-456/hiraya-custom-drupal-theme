@@ -2073,3 +2073,175 @@ body {
   color: #ffffff !important;
 }
 
+
+/* ==========================================================================
+   HIRAYA — Premium Mobile Navigation
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+
+  /* Mobile header */
+  .dxpr-theme-header {
+    position: relative;
+    z-index: 1000;
+    background: #ffffff !important;
+  }
+
+  .dxpr-theme-header .navbar-container {
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* Hamburger */
+  .dxpr-theme-header .navbar-toggler {
+    position: relative;
+    z-index: 1002;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid #dbe4ee !important;
+    border-radius: 12px;
+    background: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(7, 17, 31, 0.08);
+  }
+
+  .dxpr-theme-header .navbar-toggler:hover {
+    border-color: #2563eb !important;
+  }
+
+  /* Mobile menu drawer */
+  .dxpr-theme-header #dxpr-theme-main-menu {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    margin: 0;
+    padding: 18px 22px 28px;
+    background: rgba(7, 17, 31, 0.98) !important;
+    border-top: 1px solid rgba(56, 189, 248, 0.18);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  }
+
+  /* Menu links */
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 8px 0 18px;
+  }
+
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a,
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #ffffff !important;
+    background: transparent !important;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a:hover,
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a:focus,
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav .nav-link:hover,
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav .nav-link:focus {
+    color: #38bdf8 !important;
+    background: rgba(56, 189, 248, 0.08) !important;
+    padding-left: 20px;
+  }
+
+  /* Active link */
+  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li.active > a {
+    color: #38bdf8 !important;
+    background: rgba(37, 99, 235, 0.12) !important;
+  }
+
+  /* Contact area */
+  .dxpr-theme-header #dxpr-theme-main-menu::after {
+    display: block;
+    margin-top: 12px;
+    padding: 22px 18px;
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 14px;
+    background: linear-gradient(
+      145deg,
+      rgba(16, 31, 51, 0.95),
+      rgba(11, 23, 40, 0.98)
+    );
+    color: #ffffff;
+    content:
+      "Contact Me\A"
+      "571-999-5051\A"
+      "Ryan.buen703@icloud.com";
+    white-space: pre-line;
+    line-height: 1.9;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Keep mobile menu from becoming taller than the viewport */
+  .dxpr-theme-header #dxpr-theme-main-menu {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+}
+
+/* ==========================================================================
+   HIRAYA — Mobile Menu Button
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+
+  .dxpr-theme-header .navbar-toggler-icon {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 14px;
+    margin: 0 auto;
+    background: none !important;
+  }
+
+  .dxpr-theme-header .navbar-toggler-icon::before,
+  .dxpr-theme-header .navbar-toggler-icon::after {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: #07111f;
+    content: "";
+    transition: transform 0.2s ease;
+  }
+
+  .dxpr-theme-header .navbar-toggler-icon::before {
+    top: 2px;
+    box-shadow: 0 6px 0 #07111f;
+  }
+
+  .dxpr-theme-header .navbar-toggler-icon::after {
+    top: 14px;
+    display: none;
+  }
+
+  .dxpr-theme-header .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+    top: 8px;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .dxpr-theme-header .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    display: block;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+
+}
+
