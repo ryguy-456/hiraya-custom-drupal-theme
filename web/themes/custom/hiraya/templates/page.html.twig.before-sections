@@ -176,21 +176,39 @@
 
 {# Content Top #}
 {% if page.content_top %}
+
   {% block content_top %}
-    {% set container = theme.settings.full_width_containers.cnt_content_top ? 'dxpr-theme-fluid' : 'container' %}
-    <div class="{{ container }} content-top-container">
-      {% if not theme.settings.full_width_containers.cnt_content_top %}
-        <div class="row container-row">
-          <div class="col-sm-12 container-col">
-      {% endif %}
-            {{ page.content_top }}
-      {% if not theme.settings.full_width_containers.cnt_content_top %}
+
+    <section class="hiraya-section hiraya-section--content-top">
+
+      {% set container = theme.settings.full_width_containers.cnt_content_top ? 'dxpr-theme-fluid' : 'container' %}
+
+      <div class="{{ container }} content-top-container">
+
+        {% if not theme.settings.full_width_containers.cnt_content_top %}
+
+          <div class="row container-row">
+            <div class="col-sm-12 container-col">
+
+        {% endif %}
+
+              {{ page.content_top }}
+
+        {% if not theme.settings.full_width_containers.cnt_content_top %}
+
+            </div>
           </div>
-        </div>
-      {% endif %}
-    </div>
+
+        {% endif %}
+
+      </div>
+
+    </section>
+
   {% endblock %}
+
 {% endif %}
+
 {# Main #}
 {% block main %}
   {% set has_sidebar_first = _self.hasContent(page.sidebar_first) %}
@@ -246,13 +264,20 @@
           {% endblock %}
         {% endif %}
 
-      {# Content #}
+        {# Content #}
 {% block content %}
-  <a id="main-content"></a>
-  {{ page.content }}
-{% endblock %}
-      </section>
 
+  <section class="hiraya-section hiraya-section--content">
+
+    <a id="main-content"></a>
+
+    {{ page.content }}
+
+  </section>
+
+{% endblock %}
+
+      </section>
 
       {# Sidebar Second #}
       {% if has_sidebar_second %}
@@ -269,22 +294,40 @@
 {% endblock %}
 
 {# Content Bottom #}
+{# Content Bottom #}
 
 {% if page.content_bottom %}
+
   {% block content_bottom %}
-    {% set container = theme.settings.full_width_containers.cnt_content_bottom ? 'dxpr-theme-fluid' : 'container' %}
-    <div class="{{ container }} content-bottom-container">
-      {% if not theme.settings.full_width_containers.cnt_content_bottom %}
-        <div class="row container-row">
-          <div class="col-sm-12 container-col">
-      {% endif %}
-            {{ page.content_bottom }}
-      {% if not theme.settings.full_width_containers.cnt_content_bottom %}
+
+    <section class="hiraya-section hiraya-section--content-bottom">
+
+      {% set container = theme.settings.full_width_containers.cnt_content_bottom ? 'dxpr-theme-fluid' : 'container' %}
+
+      <div class="{{ container }} content-bottom-container">
+
+        {% if not theme.settings.full_width_containers.cnt_content_bottom %}
+
+          <div class="row container-row">
+            <div class="col-sm-12 container-col">
+
+        {% endif %}
+
+              {{ page.content_bottom }}
+
+        {% if not theme.settings.full_width_containers.cnt_content_bottom %}
+
+            </div>
           </div>
-        </div>
-      {% endif %}
-    </div>
+
+        {% endif %}
+
+      </div>
+
+    </section>
+
   {% endblock %}
+
 {% endif %}
 
 {# Footer #}

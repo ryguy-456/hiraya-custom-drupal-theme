@@ -1,24 +1,17 @@
-
 /* ==========================================================================
    HIRAYA — Custom Drupal Portfolio Theme
    Ryan Buenconsejo
    ========================================================================== */
 
 :root {
-  --hiraya-primary: #2563eb;
-  --hiraya-primary-dark: #1d4ed8;
-  --hiraya-accent: #38bdf8;
-
-  --hiraya-text: #e5edf7;
-  --hiraya-muted: #94a3b8;
-
-  --hiraya-bg: #07111f;
-  --hiraya-white: #f8fafc;
-  --hiraya-border: #1e3a5f;
-
-  --hiraya-surface: #0b1728;
-  --hiraya-surface-light: #101f33;
-  --hiraya-navy: #07111f;
+  --hiraya-primary: #1f4f46;
+  --hiraya-primary-dark: #163a34;
+  --hiraya-accent: #d4a72c;
+  --hiraya-text: #1d2926;
+  --hiraya-muted: #66736f;
+  --hiraya-bg: #f8faf9;
+  --hiraya-white: #ffffff;
+  --hiraya-border: #e3e9e6;
 }
 
 /* ==========================================================================
@@ -296,7 +289,7 @@ button:focus-visible {
 .dxpr-theme-header .navbar-nav .nav-link {
   border-radius: 8px;
   padding: 10px 14px;
-  color: #000000 !important;
+  color: var(--hiraya-text) !important;
   font-size: 0.95rem;
   font-weight: 600;
   transition:
@@ -604,11 +597,10 @@ button:focus-visible {
 .hiraya-section {
   padding: 100px 0;
 }
-.hiraya-section + .hiraya-section {
-}
 
 .hiraya-about {
   background: #ffffff;
+  border-top: 1px solid var(--hiraya-border);
 }
 
 .hiraya-section-heading {
@@ -647,7 +639,7 @@ button:focus-visible {
 
 .hiraya-about__content p {
   margin: 0 0 22px;
-  color: #ffffff;
+  color: #52615d;
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -656,7 +648,7 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
-.hiraya-stats {
+.hiraya-about__stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
@@ -696,7 +688,7 @@ button:focus-visible {
     padding: 75px 0;
   }
 
-  .hiraya-stats {
+  .hiraya-about__stats {
     grid-template-columns: 1fr;
   }
 }
@@ -708,8 +700,8 @@ button:focus-visible {
 .hiraya-experience {
   background: #f8faf9;
   border-top: 1px solid var(--hiraya-border);
-
 }
+
 .hiraya-experience__timeline {
   position: relative;
   max-width: 1000px;
@@ -993,9 +985,9 @@ button:focus-visible {
 
 .hiraya-skill-group {
   padding: 30px;
-  border: 1px solid #243b56;
+  border: 1px solid var(--hiraya-border);
   border-radius: 14px;
-  background: #0f1d30;
+  background: #ffffff;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -1045,10 +1037,10 @@ button:focus-visible {
 
 .hiraya-skill-group__tags span {
   padding: 5px 9px;
-  border: 1px solid #243b56;
+  border: 1px solid var(--hiraya-border);
   border-radius: 5px;
   color: var(--hiraya-primary);
-  background: #0b1728;
+  background: #f8faf9;
   font-size: 0.7rem;
   font-weight: 700;
 }
@@ -1269,807 +1261,3 @@ button:focus-visible {
     gap: 8px;
   }
 }
-
-/* Hide Drupal's default front-page content listing */
-.path-frontpage .views-element-container.contextual-region {
-  display: none;
-}
-
-/* ==========================================================================
-   HIRAYA — Restore Desktop Navigation
-   ========================================================================== */
-
-@media (min-width: 1201px) {
-  .dxpr-theme-header #dxpr-theme-main-menu {
-    display: block !important;
-    visibility: visible !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-
-  .dxpr-theme-header #dxpr-theme-main-menu.collapse {
-    display: block !important;
-  }
-
-  .dxpr-theme-header #dxpr-theme-main-menu > ul {
-    display: flex !important;
-    visibility: visible !important;
-  }
-}
-
-/* Hide Drupal's default front-page content */
-.path-frontpage .views-element-container.contextual-region {
-  display: none !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Restore DXPR desktop header height
-   ========================================================================== */
-
-@media (min-width: 1201px) {
-  .dxpr-theme-header.dxpr-theme-header--top {
-    height: 100px !important;
-    min-height: 100px !important;
-    overflow: visible !important;
-  }
-
-  .dxpr-theme-header.dxpr-theme-header--top #dxpr-theme-main-menu {
-    height: 100px !important;
-  }
-
-  .dxpr-theme-header.dxpr-theme-header--top .region-navigation-collapsible {
-    height: 100px !important;
-  }
-
-  .dxpr-theme-header.dxpr-theme-header--top
-  .menu.nav.navbar-nav {
-    height: 100px !important;
-  }
-}
-
-/* ==========================================================================
-   HIRAYA — Dark Blue Visual System
-   ========================================================================== */
-
-body {
-  background: var(--hiraya-bg);
-  color: var(--hiraya-text);
-}
-
-.hiraya-about,
-.hiraya-experience,
-.hiraya-projects,
-.hiraya-skills,
-.hiraya-contact {
-  background: var(--hiraya-bg);
-  color: var(--hiraya-text);
-}
-
-.hiraya-about {
-  background: #ffffff;
-  color: #000000;
-}
-
-.hiraya-about h2,
-.hiraya-about .hiraya-section-title {
-  color: #000000;
-}
-
-.hiraya-about p {
-  color: #000000;
-}
-
-.hiraya-about .hiraya-section-title {
-  color: #000000;
-}
-
-.hiraya-about .hiraya-section-eyebrow {
-  color: #2563eb;
-}
-
-.hiraya-about .hiraya-stat {
-  color: #000000;
-}
-
-.hiraya-experience {
-  background: #07111f;
-}
-
-.hiraya-projects {
-  background: #0b1728;
-}
-
-.hiraya-skills {
-  background: #07111f;
-}
-
-.hiraya-contact {
-  background: #0b1728;
-}
-
-.hiraya-about h2,
-.hiraya-experience h2,
-.hiraya-projects h2,
-.hiraya-skills h2,
-.hiraya-contact h2 {
-  color: #f8fafc;
-}
-
-.hiraya-about p,
-.hiraya-experience p,
-.hiraya-projects p,
-.hiraya-skills p,
-.hiraya-contact p {
-  color: #94a3b8;
-}
-
-/* ==========================================================================
-   HIRAYA — Animated Hero Background
-   ========================================================================== */
-
-.hiraya-hero {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 75% 35%, rgba(37, 99, 235, 0.22), transparent 30%),
-    radial-gradient(circle at 20% 80%, rgba(56, 189, 248, 0.12), transparent 35%),
-    #07111f;
-}
-
-.hiraya-hero::before {
-  content: "";
-  position: absolute;
-  inset: -50%;
-  z-index: -2;
-  background-image:
-    linear-gradient(rgba(56, 189, 248, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.055) 1px, transparent 1px);
-  background-size: 70px 70px;
-  transform: rotate(-8deg);
-  animation: hiraya-grid-drift 24s linear infinite;
-}
-
-.hiraya-hero::after {
-  content: "";
-  position: absolute;
-  width: 650px;
-  height: 650px;
-  right: -220px;
-  top: -220px;
-  z-index: -1;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(37, 99, 235, 0.18),
-    rgba(37, 99, 235, 0.04) 45%,
-    transparent 70%
-  );
-  animation: hiraya-glow-pulse 7s ease-in-out infinite;
-}
-
-.hiraya-hero__content,
-.hiraya-hero__visual {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes hiraya-grid-drift {
-  from {
-    transform: translate3d(0, 0, 0) rotate(-8deg);
-  }
-
-  to {
-    transform: translate3d(70px, 70px, 0) rotate(-8deg);
-  }
-}
-
-@keyframes hiraya-glow-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.65;
-  }
-
-  50% {
-    transform: scale(1.12);
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hiraya-hero::before,
-  .hiraya-hero::after {
-    animation: none;
-  }
-}
-
-/* ==========================================================================
-   HIRAYA — Hero Visual
-   ========================================================================== */
-
-.hiraya-hero__card {
-  position: relative;
-  background: linear-gradient(
-    145deg,
-    rgba(16, 31, 51, 0.96),
-    rgba(7, 17, 31, 0.96)
-  );
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  box-shadow:
-    0 25px 80px rgba(0, 0, 0, 0.45),
-    0 0 50px rgba(37, 99, 235, 0.15);
-  backdrop-filter: blur(12px);
-  animation: hiraya-card-float 6s ease-in-out infinite;
-}
-
-.hiraya-hero__card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(56, 189, 248, 0.08),
-    transparent 70%
-  );
-  transform: translateX(-100%);
-  animation: hiraya-card-shimmer 5s ease-in-out infinite;
-}
-
-.hiraya-hero__card-label {
-  color: #38bdf8;
-  letter-spacing: 0.18em;
-}
-
-.hiraya-hero__card-line {
-  background: linear-gradient(
-    90deg,
-    #2563eb,
-    #38bdf8,
-    transparent
-  );
-}
-
-.hiraya-hero__card-code {
-  color: #60a5fa;
-  text-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
-}
-
-@keyframes hiraya-card-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes hiraya-card-shimmer {
-  0%,
-  45% {
-    transform: translateX(-100%);
-  }
-
-  65%,
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hiraya-hero__card,
-  .hiraya-hero__card::before {
-    animation: none;
-  }
-}
-
-/* ==========================================================================
-   HIRAYA — Blue Navigation & Actions
-   ========================================================================== */
-
-/* Main navigation */
-.dxpr-theme-header .dxpr-theme-main-menu .nav-link {
-  color: #000000 !important;
-  transition:
-    color 0.2s ease,
-    text-shadow 0.2s ease;
-}
-
-.dxpr-theme-header .dxpr-theme-main-menu .nav-link:hover,
-.dxpr-theme-header .dxpr-theme-main-menu .nav-link:focus {
-  color: #38bdf8 !important;
-  text-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
-}
-
-/* Hero primary button */
-.hiraya-button--primary {
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #38bdf8
-  );
-  color: #ffffff;
-  border: 1px solid rgba(56, 189, 248, 0.45);
-  box-shadow:
-    0 10px 30px rgba(37, 99, 235, 0.3),
-    0 0 25px rgba(56, 189, 248, 0.12);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.hiraya-button--primary:hover,
-.hiraya-button--primary:focus {
-  transform: translateY(-2px);
-  box-shadow:
-    0 15px 40px rgba(37, 99, 235, 0.4),
-    0 0 35px rgba(56, 189, 248, 0.2);
-}
-
-/* Secondary button */
-.hiraya-button--secondary {
-  color: #38bdf8;
-  border-color: rgba(56, 189, 248, 0.45);
-  background: rgba(7, 17, 31, 0.45);
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.hiraya-button--secondary:hover,
-.hiraya-button--secondary:focus {
-  background: rgba(37, 99, 235, 0.12);
-  border-color: #38bdf8;
-  transform: translateY(-2px);
-}
-
-/* ==========================================================================
-   HIRAYA — Dark Blue Cards
-   ========================================================================== */
-
-.hiraya-stat,
-.hiraya-experience__content,
-.hiraya-projects__card,
-.hiraya-skills__group {
-  background: linear-gradient(
-    145deg,
-    rgba(16, 31, 51, 0.92),
-    rgba(11, 23, 40, 0.96)
-  ) !important;
-
-  border: 1px solid rgba(56, 189, 248, 0.14) !important;
-
-  box-shadow:
-    0 15px 45px rgba(0, 0, 0, 0.22);
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-/* Card hover */
-.hiraya-stat:hover,
-.hiraya-experience__content:hover,
-.hiraya-projects__card:hover,
-.hiraya-skills__group:hover {
-  transform: translateY(-4px);
-
-  border-color: rgba(56, 189, 248, 0.4) !important;
-
-  box-shadow:
-    0 20px 55px rgba(0, 0, 0, 0.3),
-    0 0 30px rgba(37, 99, 235, 0.08);
-}
-
-/* Card headings */
-.hiraya-stat h3,
-.hiraya-experience__content h3,
-.hiraya-projects__card h3,
-.hiraya-skills__group h3 {
-  color: #f8fafc;
-}
-
-/* Accent numbers */
-.hiraya-stat strong,
-.hiraya-stat-number {
-  color: #38bdf8;
-}
-
-/* Project links */
-.hiraya-projects__card a {
-  color: #38bdf8;
-}
-
-.hiraya-projects__card a:hover {
-  color: #7dd3fc;
-}
-
-/* ==========================================================================
-   HIRAYA — Contact & Footer
-   ========================================================================== */
-
-.hiraya-contact {
-  position: relative;
-  overflow: hidden;
-}
-
-.hiraya-contact::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  left: -250px;
-  bottom: -300px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(37, 99, 235, 0.16),
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-.hiraya-contact__inner {
-  position: relative;
-  z-index: 1;
-}
-
-.hiraya-contact a {
-  color: #38bdf8;
-}
-
-.hiraya-contact a:hover {
-  color: #7dd3fc;
-}
-
-/* Footer */
-
-.hiraya-footer {
-  background: #040b14 !important;
-  border-top: 1px solid rgba(56, 189, 248, 0.12);
-}
-
-.hiraya-footer__logo {
-  color: #f8fafc !important;
-}
-
-.hiraya-footer p {
-  color: #64748b;
-}
-
-.hiraya-footer__nav a {
-  color: #94a3b8;
-  transition:
-    color 0.2s ease,
-    text-shadow 0.2s ease;
-}
-
-.hiraya-footer__nav a:hover {
-  color: #38bdf8;
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
-}
-
-.hiraya-footer__bottom {
-  color: #64748b;
-  border-top-color: rgba(56, 189, 248, 0.1);
-}
-
-/* ==========================================================================
-   HIRAYA — Remove footer/page bottom gap
-   ========================================================================== */
-
-html,
-body {
-  background: #040b14;
-}
-
-.hiraya-footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.hiraya-footer:last-child {
-  margin-bottom: 0 !important;
-}
-
-.region-footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Remove footer/page bottom gap
-   ========================================================================== */
-
-html,
-body {
-  background: #040b14;
-}
-
-.hiraya-footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.hiraya-footer:last-child {
-  margin-bottom: 0 !important;
-}
-
-.region-footer {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove DXPR footer bottom spacing */
-.dxpr-theme-footer .footer-container {
-  padding-bottom: 0 !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Footer spacing cleanup
-   ========================================================================== */
-
-.dxpr-theme-footer footer {
-  padding-bottom: 0 !important;
-}
-
-.hiraya-footer {
-  padding-bottom: 2rem !important;
-}
-
-/* HIRAYA — Remove DXPR footer container spacing */
-.dxpr-theme-footer .footer-container {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* HIRAYA — Remove browser body margin */
-html,
-body {
-  margin: 0 !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Full Width Footer Region
-   ========================================================================== */
-
-.region-footer {
-  width: 100% !important;
-  max-width: none !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Global Text Color
-   ========================================================================== */
-
-/* ==========================================================================
-   HIRAYA — Heading Text
-   ========================================================================== */
-
-.hiraya-hero h1,
-.hiraya-hero h2,
-.hiraya-hero h3,
-.hiraya-about h1,
-.hiraya-about h2,
-.hiraya-about h3,
-.hiraya-experience h1,
-.hiraya-experience h2,
-.hiraya-experience h3,
-.hiraya-projects h1,
-.hiraya-projects h2,
-.hiraya-projects h3,
-.hiraya-skills h1,
-.hiraya-skills h2,
-.hiraya-skills h3,
-.hiraya-contact h1,
-.hiraya-contact h2,
-.hiraya-contact h3 {
-  color: #e5edf7 !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Solid Dark Cards
-   ========================================================================== */
-
-.hiraya-project-card {
-  background: #101f33 !important;
-  border: 1px solid #1e3a5f !important;
-  box-shadow: none !important;
-  color: #e5edf7 !important;
-}
-
-.hiraya-project-card:hover {
-  background: #101f33 !important;
-  border-color: #2563eb !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-.hiraya-project-card__title,
-.hiraya-project-card__description {
-  color: #e5edf7 !important;
-}
-
-.hiraya-project-card__type,
-.hiraya-project-card__number {
-  color: #38bdf8 !important;
-}
-
-/* ==========================================================================
-   HIRAYA — Wavy Section Transition
-   ========================================================================== */
-
-.hiraya-wave-divider {
-  position: relative;
-  width: 100%;
-  height: 70px;
-  margin-top: -1px;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.hiraya-wave-divider__svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.hiraya-wave-divider__svg path {
-  fill: #07111f;
-}
-
-.hiraya-about {
-  padding-bottom: 0 !important;
-}
-
-/* HIRAYA — remove section transition borders */
-.hiraya-experience,
-.hiraya-projects,
-.hiraya-skills,
-.hiraya-contact {
-  border-top: none !important;
-}
-
-/* HIRAYA — About section typography */
-.hiraya-about h1,
-.hiraya-about h2,
-.hiraya-about h3,
-.hiraya-about .hiraya-section-title,
-.hiraya-about p {
-  color: #000000 !important;
-}
-
-/* HIRAYA — Full-width About section */
-.hiraya-about__grid {
-  width: 100%;
-  max-width: none;
-}
-
-.hiraya-about__content {
-  width: 100%;
-}
-
-.hiraya-about__stats {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  margin-top: 50px;
-}
-
-.hiraya-about .hiraya-stat {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 25px 30px;
-  color: #000000 !important;
-}
-
-.hiraya-about .hiraya-stat + .hiraya-stat {
-  border-left: 1px solid #d1d5db !important;
-}
-
-.hiraya-about .hiraya-stat strong,
-.hiraya-about .hiraya-stat span {
-  color: #000000 !important;
-}
-
-/* HIRAYA — Experience section typography */
-.hiraya-experience,
-.hiraya-experience h1,
-.hiraya-experience h2,
-.hiraya-experience h3,
-.hiraya-experience h4,
-.hiraya-experience p,
-.hiraya-experience span,
-.hiraya-experience strong,
-.hiraya-experience li {
-  color: #ffffff !important;
-}
-
-/* HIRAYA — Skills container typography */
-.hiraya-skills,
-.hiraya-skills h1,
-.hiraya-skills h2,
-.hiraya-skills h3,
-.hiraya-skills h4,
-.hiraya-skills p,
-.hiraya-skills span,
-.hiraya-skills strong,
-.hiraya-skills li {
-  color: #ffffff !important;
-}
-
-
-/* HIRAYA — Contact container typography */
-.hiraya-contact,
-.hiraya-contact h1,
-.hiraya-contact h2,
-.hiraya-contact h3,
-.hiraya-contact h4,
-.hiraya-contact p,
-.hiraya-contact span,
-.hiraya-contact strong,
-.hiraya-contact li,
-.hiraya-contact a {
-  color: #ffffff !important;
-}
-
-
-/* HIRAYA — Contact CTA button text */
-.hiraya-contact a.hiraya-button,
-.hiraya-contact .hiraya-button {
-  color: #2563eb !important;
-}
-
-
-/* HIRAYA — Contact social links */
-.hiraya-contact a[href*="github"],
-.hiraya-contact a[href*="linkedin"] {
-  color: #ffffff !important;
-}
-
-
-/* HIRAYA — Hero name sizing */
-.hiraya-hero h1,
-.hiraya-hero .hiraya-hero__title {
-  font-size: 3rem !important;
-}
-
-
-/* HIRAYA — Experience dates */
-.hiraya-experience .hiraya-experience__date,
-.hiraya-experience .hiraya-experience__year {
-  color: #000000 !important;
-}
-
-
-/* HIRAYA — Experience date */
-.hiraya-experience .hiraya-experience__dates {
-  color: #000000 !important;
-}
-
-
-/* HIRAYA — Experience tags */
-.hiraya-experience .hiraya-experience__tags span {
-  color: #000000 !important;
-}
-
-
-/* HIRAYA — Hero description */
-.hiraya-hero p {
-  color: #ffffff !important;
-}
-

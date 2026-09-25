@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    HIRAYA — Custom Drupal Portfolio Theme
    Ryan Buenconsejo
@@ -296,7 +295,7 @@ button:focus-visible {
 .dxpr-theme-header .navbar-nav .nav-link {
   border-radius: 8px;
   padding: 10px 14px;
-  color: #000000 !important;
+  color: var(--hiraya-text) !important;
   font-size: 0.95rem;
   font-weight: 600;
   transition:
@@ -604,11 +603,10 @@ button:focus-visible {
 .hiraya-section {
   padding: 100px 0;
 }
-.hiraya-section + .hiraya-section {
-}
 
 .hiraya-about {
   background: #ffffff;
+  border-top: 1px solid var(--hiraya-border);
 }
 
 .hiraya-section-heading {
@@ -647,7 +645,7 @@ button:focus-visible {
 
 .hiraya-about__content p {
   margin: 0 0 22px;
-  color: #ffffff;
+  color: #52615d;
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -656,7 +654,7 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
-.hiraya-stats {
+.hiraya-about__stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
@@ -696,7 +694,7 @@ button:focus-visible {
     padding: 75px 0;
   }
 
-  .hiraya-stats {
+  .hiraya-about__stats {
     grid-template-columns: 1fr;
   }
 }
@@ -708,8 +706,8 @@ button:focus-visible {
 .hiraya-experience {
   background: #f8faf9;
   border-top: 1px solid var(--hiraya-border);
-
 }
+
 .hiraya-experience__timeline {
   position: relative;
   max-width: 1000px;
@@ -993,9 +991,9 @@ button:focus-visible {
 
 .hiraya-skill-group {
   padding: 30px;
-  border: 1px solid #243b56;
+  border: 1px solid var(--hiraya-border);
   border-radius: 14px;
-  background: #0f1d30;
+  background: #ffffff;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -1045,10 +1043,10 @@ button:focus-visible {
 
 .hiraya-skill-group__tags span {
   padding: 5px 9px;
-  border: 1px solid #243b56;
+  border: 1px solid var(--hiraya-border);
   border-radius: 5px;
   color: var(--hiraya-primary);
-  background: #0b1728;
+  background: #f8faf9;
   font-size: 0.7rem;
   font-weight: 700;
 }
@@ -1347,29 +1345,7 @@ body {
 }
 
 .hiraya-about {
-  background: #ffffff;
-  color: #000000;
-}
-
-.hiraya-about h2,
-.hiraya-about .hiraya-section-title {
-  color: #000000;
-}
-
-.hiraya-about p {
-  color: #000000;
-}
-
-.hiraya-about .hiraya-section-title {
-  color: #000000;
-}
-
-.hiraya-about .hiraya-section-eyebrow {
-  color: #2563eb;
-}
-
-.hiraya-about .hiraya-stat {
-  color: #000000;
+  background: #0b1728;
 }
 
 .hiraya-experience {
@@ -1574,7 +1550,7 @@ body {
 
 /* Main navigation */
 .dxpr-theme-header .dxpr-theme-main-menu .nav-link {
-  color: #000000 !important;
+  color: #cbd5e1 !important;
   transition:
     color 0.2s ease,
     text-shadow 0.2s ease;
@@ -1633,8 +1609,8 @@ body {
    HIRAYA — Dark Blue Cards
    ========================================================================== */
 
-.hiraya-stat,
-.hiraya-experience__content,
+.hiraya-about__stat,
+.hiraya-experience__card,
 .hiraya-projects__card,
 .hiraya-skills__group {
   background: linear-gradient(
@@ -1655,8 +1631,8 @@ body {
 }
 
 /* Card hover */
-.hiraya-stat:hover,
-.hiraya-experience__content:hover,
+.hiraya-about__stat:hover,
+.hiraya-experience__card:hover,
 .hiraya-projects__card:hover,
 .hiraya-skills__group:hover {
   transform: translateY(-4px);
@@ -1669,16 +1645,16 @@ body {
 }
 
 /* Card headings */
-.hiraya-stat h3,
-.hiraya-experience__content h3,
+.hiraya-about__stat h3,
+.hiraya-experience__card h3,
 .hiraya-projects__card h3,
 .hiraya-skills__group h3 {
   color: #f8fafc;
 }
 
 /* Accent numbers */
-.hiraya-stat strong,
-.hiraya-stat-number {
+.hiraya-about__stat strong,
+.hiraya-about__stat-number {
   color: #38bdf8;
 }
 
@@ -1907,169 +1883,76 @@ body {
 }
 
 /* ==========================================================================
-   HIRAYA — Wavy Section Transition
+   HIRAYA — Drupal Content Sections
    ========================================================================== */
 
-.hiraya-wave-divider {
+.hiraya-section {
   position: relative;
-  width: 100%;
-  height: 70px;
-  margin-top: -1px;
-  overflow: hidden;
-  line-height: 0;
+  padding: 96px 0;
 }
 
-.hiraya-wave-divider__svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+.hiraya-section + .hiraya-section {
+  border-top: 1px solid var(--hiraya-border);
 }
 
-.hiraya-wave-divider__svg path {
-  fill: #07111f;
+/* Main Drupal content */
+
+.hiraya-section--content {
+  background: #ffffff;
 }
 
-.hiraya-about {
-  padding-bottom: 0 !important;
+/* Content Top */
+
+.hiraya-section--content-top {
+  background:
+    linear-gradient(
+      180deg,
+      #f8fafc 0%,
+      #ffffff 100%
+    );
 }
 
-/* HIRAYA — remove section transition borders */
-.hiraya-experience,
-.hiraya-projects,
-.hiraya-skills,
-.hiraya-contact {
-  border-top: none !important;
+/* Content Bottom */
+
+.hiraya-section--content-bottom {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 100%
+    );
 }
 
-/* HIRAYA — About section typography */
-.hiraya-about h1,
-.hiraya-about h2,
-.hiraya-about h3,
-.hiraya-about .hiraya-section-title,
-.hiraya-about p {
-  color: #000000 !important;
+/* Drupal blocks inside Hiraya sections */
+
+.hiraya-section .block {
+  margin-bottom: 0;
 }
 
-/* HIRAYA — Full-width About section */
-.hiraya-about__grid {
-  width: 100%;
-  max-width: none;
+.hiraya-section .block + .block {
+  margin-top: 32px;
 }
 
-.hiraya-about__content {
-  width: 100%;
+/* Improve Drupal block titles */
+
+.hiraya-section .block__title,
+.hiraya-section h2.block-title {
+  margin-bottom: 24px;
+  color: var(--hiraya-text);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -0.03em;
 }
 
-.hiraya-about__stats {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  margin-top: 50px;
+/* Responsive spacing */
+
+@media (max-width: 767.98px) {
+  .hiraya-section {
+    padding: 70px 0;
+  }
 }
 
-.hiraya-about .hiraya-stat {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 25px 30px;
-  color: #000000 !important;
+/* HIRAYA TEST */
+body {
+  outline: 10px solid red !important;
 }
-
-.hiraya-about .hiraya-stat + .hiraya-stat {
-  border-left: 1px solid #d1d5db !important;
-}
-
-.hiraya-about .hiraya-stat strong,
-.hiraya-about .hiraya-stat span {
-  color: #000000 !important;
-}
-
-/* HIRAYA — Experience section typography */
-.hiraya-experience,
-.hiraya-experience h1,
-.hiraya-experience h2,
-.hiraya-experience h3,
-.hiraya-experience h4,
-.hiraya-experience p,
-.hiraya-experience span,
-.hiraya-experience strong,
-.hiraya-experience li {
-  color: #ffffff !important;
-}
-
-/* HIRAYA — Skills container typography */
-.hiraya-skills,
-.hiraya-skills h1,
-.hiraya-skills h2,
-.hiraya-skills h3,
-.hiraya-skills h4,
-.hiraya-skills p,
-.hiraya-skills span,
-.hiraya-skills strong,
-.hiraya-skills li {
-  color: #ffffff !important;
-}
-
-
-/* HIRAYA — Contact container typography */
-.hiraya-contact,
-.hiraya-contact h1,
-.hiraya-contact h2,
-.hiraya-contact h3,
-.hiraya-contact h4,
-.hiraya-contact p,
-.hiraya-contact span,
-.hiraya-contact strong,
-.hiraya-contact li,
-.hiraya-contact a {
-  color: #ffffff !important;
-}
-
-
-/* HIRAYA — Contact CTA button text */
-.hiraya-contact a.hiraya-button,
-.hiraya-contact .hiraya-button {
-  color: #2563eb !important;
-}
-
-
-/* HIRAYA — Contact social links */
-.hiraya-contact a[href*="github"],
-.hiraya-contact a[href*="linkedin"] {
-  color: #ffffff !important;
-}
-
-
-/* HIRAYA — Hero name sizing */
-.hiraya-hero h1,
-.hiraya-hero .hiraya-hero__title {
-  font-size: 3rem !important;
-}
-
-
-/* HIRAYA — Experience dates */
-.hiraya-experience .hiraya-experience__date,
-.hiraya-experience .hiraya-experience__year {
-  color: #000000 !important;
-}
-
-
-/* HIRAYA — Experience date */
-.hiraya-experience .hiraya-experience__dates {
-  color: #000000 !important;
-}
-
-
-/* HIRAYA — Experience tags */
-.hiraya-experience .hiraya-experience__tags span {
-  color: #000000 !important;
-}
-
-
-/* HIRAYA — Hero description */
-.hiraya-hero p {
-  color: #ffffff !important;
-}
-

@@ -135,7 +135,7 @@
 
         {# Navigation (collapsible) #}
         {% if page.navigation_collapsible %}
-       <nav role="navigation" id="dxpr-theme-main-menu" class="navbar-expand-lg dxpr-theme-main-menu">
+            <nav role="navigation" id="dxpr-theme-main-menu" class="navbar-expand-lg dxpr-theme-main-menu collapse">
             {{ page.navigation_collapsible }}
             </nav>
         {% endif %}
@@ -180,25 +180,30 @@
     {% set container = theme.settings.full_width_containers.cnt_content_top ? 'dxpr-theme-fluid' : 'container' %}
     <div class="{{ container }} content-top-container">
       {% if not theme.settings.full_width_containers.cnt_content_top %}
-        <div class="row container-row">
-          <div class="col-sm-12 container-col">
+      <div class="row container-row"><div class="col-sm-12 container-col">
       {% endif %}
-            {{ page.content_top }}
+      {{ page.content_top }}
       {% if not theme.settings.full_width_containers.cnt_content_top %}
-          </div>
-        </div>
+      </div></div>
       {% endif %}
     </div>
   {% endblock %}
 {% endif %}
+
 {# Main #}
 {% block main %}
-  {% set has_sidebar_first = _self.hasContent(page.sidebar_first) %}
+  {% set has_sidebar_first  = _self.hasContent(page.sidebar_first) %}
   {% set has_sidebar_second = _self.hasContent(page.sidebar_second) %}
-  {% set container = '' %}
+  {% set container = theme.settings.full_width_containers.cnt_content
+  or node.field_dth_main_content_width.getString() == 'dxpr-theme-util-full-width-content'
+  or node and attribute(theme.settings.full_width_content_types, node.getType)
+  and not has_sidebar_first
+  and not has_sidebar_second ? '' : 'container' %}
 
   <div role="main" class="main-container {{ container }} js-quickedit-main-content clearfix">
-
+    {% if container != '' %}
+    <div class="row">
+    {% endif %}
       {# Sidebar First #}
       {% if has_sidebar_first %}
         {% block sidebar_first %}
@@ -246,13 +251,12 @@
           {% endblock %}
         {% endif %}
 
-      {# Content #}
-{% block content %}
-  <a id="main-content"></a>
-  {{ page.content }}
-{% endblock %}
+        {# Content #}
+        {% block content %}
+          <a id="main-content"></a>
+          {{ page.content }}
+        {% endblock %}
       </section>
-
 
       {# Sidebar Second #}
       {% if has_sidebar_second %}
@@ -269,23 +273,21 @@
 {% endblock %}
 
 {# Content Bottom #}
-
 {% if page.content_bottom %}
   {% block content_bottom %}
     {% set container = theme.settings.full_width_containers.cnt_content_bottom ? 'dxpr-theme-fluid' : 'container' %}
     <div class="{{ container }} content-bottom-container">
       {% if not theme.settings.full_width_containers.cnt_content_bottom %}
-        <div class="row container-row">
-          <div class="col-sm-12 container-col">
+      <div class="row container-row"><div class="col-sm-12 container-col">
       {% endif %}
-            {{ page.content_bottom }}
+      {{ page.content_bottom }}
       {% if not theme.settings.full_width_containers.cnt_content_bottom %}
-          </div>
-        </div>
+      </div></div>
       {% endif %}
     </div>
   {% endblock %}
 {% endif %}
+</div>
 
 {# Footer #}
 {% if page.footer %}
