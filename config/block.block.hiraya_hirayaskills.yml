@@ -12,7 +12,7 @@ dependencies:
 id: hiraya_hirayaskills
 theme: hiraya
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: 'block_content:278983b8-ae10-4349-8549-a9d25f536a8e'
 settings:
