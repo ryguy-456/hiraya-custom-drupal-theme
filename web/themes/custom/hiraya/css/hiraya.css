@@ -2093,3 +2093,35 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+/* HIRAYA Projects — portfolio CTA */
+
+.hiraya-projects__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
+
+.hiraya-projects__cta .hiraya-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hiraya-projects__cta .hiraya-button:hover,
+.hiraya-projects__cta .hiraya-button:focus {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
