@@ -634,70 +634,65 @@ button:focus-visible {
   letter-spacing: -0.04em;
 }
 
+/* HIRAYA About — full-width layout */
+
 .hiraya-about__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
-  gap: 80px;
-  align-items: start;
+  display: block;
+  width: 100%;
+  max-width: none;
 }
 
 .hiraya-about__content {
-  max-width: 720px;
+  width: 100%;
+  max-width: 900px;
 }
 
-.hiraya-about__content p {
-  margin: 0 0 22px;
-  color: #ffffff;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.hiraya-about__content p:last-child {
-  margin-bottom: 0;
-}
-
-.hiraya-stats {
+.hiraya-about__stats {
+  width: 100%;
+  max-width: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 60px;
 }
 
-.hiraya-stat {
-  min-height: 145px;
-  padding: 24px;
-  border: 1px solid var(--hiraya-border);
-  border-radius: 12px;
-  background: #f8faf9;
+.hiraya-about .hiraya-stat {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 25px 30px;
 }
 
-.hiraya-stat strong {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--hiraya-primary);
-  font-size: 1.45rem;
-  font-weight: 800;
+.hiraya-about .hiraya-stat:first-child {
+  padding-left: 0;
 }
 
-.hiraya-stat span {
-  color: #65736f;
-  font-size: 0.9rem;
-  line-height: 1.5;
+.hiraya-about .hiraya-stat:last-child {
+  padding-right: 0;
 }
 
 @media (max-width: 991.98px) {
-  .hiraya-about__grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .hiraya-about__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hiraya-about .hiraya-stat:nth-child(3) {
+    border-left: none !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  .hiraya-section {
-    padding: 75px 0;
+  .hiraya-about__stats {
+    grid-template-columns: 1fr;
   }
 
-  .hiraya-stats {
-    grid-template-columns: 1fr;
+  .hiraya-about .hiraya-stat {
+    padding: 20px 0;
+  }
+
+  .hiraya-about .hiraya-stat + .hiraya-stat {
+    border-left: none !important;
+    border-top: 1px solid #d1d5db !important;
   }
 }
 
@@ -2073,154 +2068,28 @@ body {
   color: #ffffff !important;
 }
 
-/* ==========================================================================
-   HIRAYA — Mobile Navigation
-   ========================================================================== */
-
-@media (max-width: 991.98px) {
-
-  /* Header */
-  .dxpr-theme-header {
-    position: relative !important;
-    z-index: 1000 !important;
-    background: #ffffff !important;
+/* HIRAYA About — mobile text containment */
+@media (max-width: 767.98px) {
+  .hiraya-about__content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
-  .dxpr-theme-header .navbar-container {
-    position: relative !important;
-    z-index: 1001 !important;
+  .hiraya-about__content p {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    white-space: normal;
   }
-
-  /* Hamburger button */
-  .dxpr-theme-header .navbar-toggler {
-    position: relative !important;
-    z-index: 1005 !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 44px !important;
-    height: 44px !important;
-
-    margin-left: auto !important;
-    padding: 0 !important;
-
-    border: 1px solid #dbe4ee !important;
-    border-radius: 10px !important;
-
-    background: #ffffff !important;
-
-    cursor: pointer !important;
-    touch-action: manipulation !important;
-    -webkit-tap-highlight-color: transparent !important;
-  }
-
-  .dxpr-theme-header .navbar-toggler:focus {
-    outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;
-  }
-
-  /* Mobile drawer */
-  .dxpr-theme-header #dxpr-theme-main-menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-
-    width: 100% !important;
-    max-width: none !important;
-
-    margin: 0 !important;
-    padding: 12px 16px 20px !important;
-
-    background: #07111f !important;
-
-    border: 0 !important;
-    border-top: 1px solid rgba(56, 189, 248, 0.2) !important;
-
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-
-    z-index: 999 !important;
-
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Bootstrap/DXPR visibility */
-  .dxpr-theme-header #dxpr-theme-main-menu.collapse:not(.show) {
-    display: none !important;
-  }
-
-  .dxpr-theme-header #dxpr-theme-main-menu.collapse.show {
-    display: block !important;
-    visibility: visible !important;
-    height: auto !important;
-  }
-
-  /* Vertical menu */
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-
-    width: 100% !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    gap: 3px !important;
-  }
-
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li {
-    display: block !important;
-    width: 100% !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a,
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav .nav-link {
-    display: block !important;
-
-    width: 100% !important;
-
-    margin: 0 !important;
-    padding: 14px 16px !important;
-
-    border-radius: 8px !important;
-
-    color: #ffffff !important;
-    background: transparent !important;
-
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-
-    text-decoration: none !important;
-
-    -webkit-tap-highlight-color: transparent !important;
-  }
-
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a:hover,
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a:focus,
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li > a:active {
-    color: #38bdf8 !important;
-    background: rgba(56, 189, 248, 0.08) !important;
-  }
-
-  /* Active item */
-  .dxpr-theme-header #dxpr-theme-main-menu .navbar-nav > li.active > a {
-    color: #38bdf8 !important;
-    background: rgba(37, 99, 235, 0.12) !important;
-  }
-
-  /* Remove experimental contact panel */
-  .dxpr-theme-header #dxpr-theme-main-menu::after {
-    display: none !important;
-    content: none !important;
-  }
-
 }
 
+/* HIRAYA — consistent box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
