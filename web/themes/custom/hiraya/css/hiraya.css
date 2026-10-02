@@ -1696,14 +1696,8 @@ body {
 }
 
 .hiraya-contact::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  left: -250px;
-  bottom: -300px;
-  border-radius: 50%;
-  pointer-events: none;
+  display: none !important;
+  content: none !important;
 }
 
 .hiraya-contact__inner {
