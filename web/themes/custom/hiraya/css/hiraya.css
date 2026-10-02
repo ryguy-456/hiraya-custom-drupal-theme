@@ -2192,3 +2192,7 @@ body {
 }
 
 
+/* HIRAYA — Project card type labels */
+.hiraya-project-card__type {
+  color: #111827 !important;
+}
