@@ -2196,3 +2196,122 @@ body {
 .hiraya-project-card__type {
   color: #111827 !important;
 }
+
+/* ==========================================================================
+   HIRAYA — Drupal Toolkit
+   ========================================================================== */
+
+.hiraya-toolkit {
+  background: #f8fafc;
+}
+
+.hiraya-toolkit__intro {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: #64748b;
+}
+
+.hiraya-toolkit__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.hiraya-toolkit-card {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hiraya-toolkit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+}
+
+.hiraya-toolkit-card--featured {
+  grid-column: span 2;
+  background: #040b14;
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.hiraya-toolkit-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hiraya-toolkit-card h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.hiraya-toolkit-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.hiraya-toolkit-card--featured h3 {
+  color: #f8fafc;
+}
+
+.hiraya-toolkit-card--featured p {
+  color: #94a3b8;
+}
+
+.hiraya-toolkit-card__eyebrow {
+  margin-bottom: 6px !important;
+  color: #38bdf8 !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hiraya-toolkit-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.hiraya-toolkit-card__tags span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .hiraya-toolkit__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hiraya-toolkit-card--featured {
+    grid-column: span 1;
+  }
+}
+
+/* HIRAYA — Drupal Toolkit heading text */
+.hiraya-toolkit .hiraya-section-title,
+.hiraya-toolkit .hiraya-toolkit__intro {
+  color: #111827 !important;
+}
