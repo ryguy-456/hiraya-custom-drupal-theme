@@ -8,6 +8,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  canvas: 0
   ckeditor5: 0
   comment: 0
   config: 0
@@ -61,4 +62,5 @@ theme:
   dxpr_theme: 0
   gin: 0
   hiraya: 0
+  canvas_stark: 0
 profile: standard

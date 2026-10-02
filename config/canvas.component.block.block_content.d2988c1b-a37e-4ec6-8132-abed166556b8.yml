@@ -1,0 +1,25 @@
+uuid: 17bc03f1-94a8-4dc3-8134-bcab32d14b0d
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d2988c1b-a37e-4ec6-8132-abed166556b8'
+  module:
+    - block_content
+active_version: a974cd23ac906714
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:d2988c1b-a37e-4ec6-8132-abed166556b8'
+        label: 'HIRAYA Drupal Toolkit'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'HIRAYA Drupal Toolkit'
+id: block.block_content.d2988c1b-a37e-4ec6-8132-abed166556b8
+provider: block_content
+source: block
+source_local_id: 'block_content:d2988c1b-a37e-4ec6-8132-abed166556b8'

@@ -1,0 +1,28 @@
+uuid: 196686ec-e4f7-4b0b-9e82-5043ec6ecad3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d2988c1b-a37e-4ec6-8132-abed166556b8'
+  module:
+    - block_content
+    - system
+  theme:
+    - hiraya
+id: hiraya_hirayatoolkit
+theme: hiraya
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:d2988c1b-a37e-4ec6-8132-abed166556b8'
+settings:
+  id: 'block_content:d2988c1b-a37e-4ec6-8132-abed166556b8'
+  label: 'HIRAYA Drupal Toolkit'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
