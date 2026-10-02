@@ -2125,3 +2125,72 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
 }
+
+/* ==========================================================================
+   HIRAYA — Arlington Skyline Footer Transition
+   ========================================================================== */
+
+.hiraya-arlington-transition {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hiraya-arlington-transition img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* HIRAYA — Projects section white */
+.hiraya-projects {
+  background: #ffffff !important;
+}
+
+/* ==========================================================================
+   HIRAYA — Light Projects + Contact
+   ========================================================================== */
+
+.hiraya-projects,
+.hiraya-contact {
+  background: #ffffff !important;
+}
+
+/* ==========================================================================
+   HIRAYA — Projects White Section
+   ========================================================================== */
+
+.hiraya-projects,
+.hiraya-contact {
+  background: #ffffff !important;
+}
+
+/* Projects section text */
+.hiraya-projects > .hiraya-container .hiraya-section-eyebrow,
+.hiraya-projects > .hiraya-container .hiraya-section-title,
+.hiraya-projects > .hiraya-container .hiraya-projects__intro {
+  color: #111827 !important;
+}
+
+/* Keep project cards dark with white text */
+.hiraya-project-card {
+  color: #ffffff;
+}
+
+.hiraya-project-card__title,
+.hiraya-project-card__description,
+.hiraya-project-card__number,
+.hiraya-project-card__type,
+.hiraya-project-card__tags span {
+  color: #ffffff !important;
+}
+
+/* HIRAYA — Project card tag text */
+.hiraya-project-card__tags span {
+  color: #111827 !important;
+}

@@ -287,17 +287,6 @@
   {% endblock %}
 {% endif %}
 
-{# Arlington Skyline Transition #}
-{% if page.footer %}
-  <div class="hiraya-arlington-transition" aria-hidden="true">
-    <img
-      src="{{ directory }}/images/arlington-skyline.png"
-      alt=""
-      loading="lazy"
-    >
-  </div>
-{% endif %}
-
 {# Footer #}
 {% if page.footer %}
   {% block footer %}
