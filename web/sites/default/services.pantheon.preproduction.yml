@@ -1,0 +1,17 @@
+parameters:
+  twig.config:
+    debug: true
+
+  cors.config:
+    enabled: true
+    allowedHeaders:
+      - '*'
+    allowedMethods:
+      - GET
+      - OPTIONS
+    allowedOrigins:
+      - 'http://localhost:5173'
+    allowedOriginsPatterns: []
+    exposedHeaders: []
+    maxAge: 1000
+    supportsCredentials: false
