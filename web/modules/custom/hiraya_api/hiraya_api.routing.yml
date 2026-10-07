@@ -1,0 +1,15 @@
+hiraya_api.hello:
+  path: '/api/hello'
+  defaults:
+    _controller: '\Drupal\hiraya_api\Controller\HirayaApiController::hello'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+hiraya_api.projects:
+  path: '/api/projects'
+  defaults:
+    _controller: '\Drupal\hiraya_api\Controller\HirayaApiController::projects'
+    _format: 'json'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: HIRAYA API
+type: module
+description: 'Provides API endpoints for the HIRAYA portfolio.'
+package: Custom
+core_version_requirement: ^10 || ^11
