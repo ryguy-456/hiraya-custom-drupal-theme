@@ -11,6 +11,7 @@ parameters:
       - OPTIONS
     allowedOrigins:
       - 'http://localhost:5173'
+      - 'https://hiraya-headless.vercel.app'
     allowedOriginsPatterns: []
     exposedHeaders: []
     maxAge: 1000
