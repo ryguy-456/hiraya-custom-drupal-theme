@@ -2,7 +2,6 @@
 
 namespace Drupal\hiraya_api\Controller;
 
-use Drupal\node\Entity\Node;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class HirayaApiController {
@@ -29,6 +28,9 @@ class HirayaApiController {
         'id' => $node->id(),
         'title' => $node->getTitle(),
         'description' => $node->get('field_description')->value,
+        'type' => $node->hasField('field_project_type')
+          ? $node->get('field_project_type')->value
+          : '',
       ];
     }
 
